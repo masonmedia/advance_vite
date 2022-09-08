@@ -1,0 +1,92 @@
+{
+    "home": {
+        "hero": {
+            "title": "The best in rehabilitation services for people with an acquired brain injury.",
+            "cta1": "Read more",
+            "cta2": "Contact us"
+        }
+    },
+    "footer": {
+        "one": [
+            "Advance Therapy",
+            "Home",
+            "About"
+        ],
+        "two": [
+            "Office",
+            "188 Inkerman Street",
+            "Guelph, Ontario",
+            "N1H 3E1"
+        ],
+        "three": [
+            "Contact",
+            "doug@atherapy.ca",
+            "1-519-648-3345",
+            "1-866-305-5140"
+        ],
+        "four": [
+            "Resources"
+        ]
+    },
+    "footer2": [
+        {
+            "title": "Advance Therapy",
+            "links": [
+                {
+                    "title": "Home",
+                    "url": "/"
+                },
+                {
+                    "title": "About",
+                    "url": "/about"
+                },
+                {
+                    "title": "Services",
+                    "url": "/services"
+                },
+                {
+                    "title": "Therapists",
+                    "url": "/"
+                }
+            ]
+        },
+        {
+            "title": "Office",
+            "text": [
+                "Office",
+                "188 Inkerman Street",
+                "Guelph, Ontario",
+                "N1H 3E1"
+            ]
+        },
+        {
+            "title": "Contact",
+            "text": [
+                "doug@atherapy.ca",
+                "1-519-648-3345",
+                "1-866-305-5140"
+            ]
+        },
+        {
+            "title": "Resources",
+            "links": [
+                {
+                    "title": "BIAWW",
+                    "url": "http://www.biaww.org/"
+                },
+                {
+                    "title": "Facebook",
+                    "url": "https://www.facebook.com/BrainInjuryAssociationWaterlooWellington/"
+                },
+                {
+                    "title": "Brain Injury Canada",
+                    "url": "https://braininjurycanada.ca/en/"
+                },
+                {
+                    "title": "CBC",
+                    "url": "https://www.cbc.ca/news2/interactives/brain/"
+                }
+            ]
+        }
+    ]
+}
