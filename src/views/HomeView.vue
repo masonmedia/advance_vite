@@ -1,7 +1,11 @@
 <script setup>
 // import { textData } from '@/stores/data'
 // const data = textData()
+import useImageLoader from '../stores/useImageLoader'
 import data from '@/json/data'
+// check image loaded
+const { isLoaded, loadImage } = useImageLoader();
+
 
 </script>
 
@@ -9,20 +13,23 @@ import data from '@/json/data'
   <div>
     <div class="container-fluid px-0">
       <div class="row min-vh-50 mt-5">
-        <div class="col-lg-12 mt-3 p-5">
+        <div class="col-lg-9 mt-3 p-5">
           <h4 class="mb-3">Advance Therapy</h4>
           <h1 class="fw-bold display-1 lh-1">{{ data.home.hero.title }}</h1>
           <div class="d-flex mt-4">
-            <div class="btn btn-success me-2">Read more</div>
-            <div class="btn btn-outline-success">Contact us</div>
+            <div class="btn btn-success me-2 rounded-5 px-4">Read more</div>
+            <div class="btn btn-outline-success rounded-5 px-4">Contact us</div>
           </div>
         </div>
       </div>
-      
+
       <div class="row">
-        <div class="col-lg-12 px-5 pt-5">
-         <img class="w-100 rounded" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-        </div>
+        <div class="col-sm-12 px-5 pt-5 min-vh-50">
+          <TransitionGroup name="fade" mode="out-in">
+              <div :key="1"  @load="loadImage" v-show="!isLoaded" class="placeholder placeholder-lg col-12 w-100 min-vh-50 bg-success"></div>
+              <img :key="2" @load="loadImage" v-show="isLoaded" class="fade-in w-100 rounded-3" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+          </TransitionGroup>
+          </div>
       </div>
 
       <!-- about -->
@@ -31,11 +38,15 @@ import data from '@/json/data'
         <div class="col-lg-6 min-vh-50 d-flex flex-column my-auto p-5">
           <h4 class="text-secondary fw-bold m-0">Who we are</h4>
           <h1 class="fw-bold lh-1 display-3 my-3">Helping people thrive</h1>
-          <p class="h4 fw-light">Advance Therapy is a healthcare services provider based in Guelph/Kitchener-Waterloo specializing in brain injury rehabilitation. Our team of highly trained therapists help clients achieve their maximum recovery.</p>
-          <div class="btn btn-outline-success col-3 mt-3">Read more</div>
+          <p class="h4 col-md-10 fw-light">Advance Therapy is a healthcare services provider based in Guelph/Kitchener-Waterloo specializing in brain injury rehabilitation. Our team of highly trained therapists help clients achieve their maximum recovery.</p>
+          <div class="d-flex mt-3">
+            <router-link to="/about">
+              <button role="button" class="btn btn-success rounded-5 px-4">Read more</button>
+            </router-link>
+          </div>
         </div>
         <div class="col-lg-6 px-5 py-lg-5">
-         <img class="w-100 h-100" style="object-fit: cover" src="https://picsum.photos/1000/600?random=1" alt="">
+         <img class="w-100 h-100 rounded-3" style="object-fit: cover" src="https://picsum.photos/1000/600?random=1" alt="">
         </div>
       </div>
 
@@ -82,23 +93,25 @@ import data from '@/json/data'
         </div>
       </div>
 
-      <!-- therpists -->
+      <!-- therapists -->
 
       <div class="row min-vh-100">
         <div class="col-lg-6 px-5 py-lg-5">
-         <img class="w-100 h-100" style="object-fit: cover" src="https://picsum.photos/1000/600?random=2" alt="">
+         <img class="w-100 h-100 rounded-3" style="object-fit: cover" src="https://picsum.photos/1000/600?random=2" alt="">
         </div>
         <div class="col-lg-6 min-vh-50 d-flex flex-column my-auto p-5">
           <h4 class="text-secondary fw-bold m-0">Our team</h4>
-          <h1 class="fw-bold lh-1 display-3 my-3">Professional care with personal attention</h1>
-          <p class="h4 fw-light">Our team of highly trained Rehabilitation Therapists take pride in helping clients achieve their maximum recovery. We work hard to tailor our services to each client, and deliver the best in rehabilitation and support services.</p>
-          <div class="btn btn-outline-success col-3 mt-3">Read more</div>
+          <h1 class="col-md-10 fw-bold lh-1 display-3 my-3">Professional care with personal attention</h1>
+          <p class="h4 fw-light col-md-10">Our team of highly trained Rehabilitation Therapists take pride in helping clients achieve their maximum recovery. We work hard to tailor our services to each client, and deliver the best in rehabilitation and support services.</p>
+          <div class="d-flex mt-3">
+            <button role="button" class="btn btn-success rounded-5 px-4">Read more</button>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-12 px-5">
-         <img class="w-100" src="https://picsum.photos/1000/600?random=3" alt="">
+         <img class="w-100 rounded-3" src="https://picsum.photos/1000/600?random=3" alt="">
         </div>
       </div>
 
@@ -106,8 +119,11 @@ import data from '@/json/data'
         <div class="col-lg-8 offset-lg-2 d-flex flex-column my-auto mx-auto p-5 text-center">
           <h4 class="text-secondary fw-bold m-0">Contact us</h4>
           <h1 class="fw-bold display-3 lh-1 my-3">Start your journey today</h1>
-          <p class="h4 fw-light">Embark on your journey to recovery with us. Please get in touch for booking, details about our range of services, questions, or for more information. We look forward to hearing from you.</p>
-          <div class="btn btn-success col-4 offset-4 mt-3">Contact us</div>
+          <p class="h4 col-md-10 offset-md-1 fw-light">Embark on your journey to recovery with us. Please get in touch for booking, details about our range of services, questions, or for more information. We look forward to hearing from you.</p>
+          <div class="d-flex justify-content-center align-items-center">
+            <button role="button" class="btn btn-success mt-3 px-4 rounded-5">Contact us</button>
+          </div>
+          
         </div>
       </div>
 
