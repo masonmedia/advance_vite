@@ -2,26 +2,26 @@
 // import { textData } from '@/stores/data'
 // const data = textData()
 import useImageLoader from '../stores/useImageLoader'
+import Contact from '../components/TheContact.vue'
+import Hero from '../components/TheHero.vue'
 import data from '@/json/data'
 // check image loaded
 const { isLoaded, loadImage } = useImageLoader();
-
 
 </script>
 
 <template>
   <div>
     <div class="container-fluid px-0">
-      <div class="row min-vh-50 mt-5">
-        <div class="col-lg-9 mt-3 p-5">
-          <h4 class="mb-3">Advance Therapy</h4>
-          <h1 class="fw-bold display-1 lh-1">{{ data.home.hero.title }}</h1>
-          <div class="d-flex mt-4">
-            <div class="btn btn-success me-2 rounded-5 px-4">Read more</div>
-            <div class="btn btn-outline-success rounded-5 px-4">Contact us</div>
-          </div>
+
+      <hero row-class="mt-5" col-class="mt-3 p-5">
+        <h4 class="mb-3">Advance Therapy</h4>
+        <h1 class="fw-bold display-1 lh-1">{{ data.home.hero.title }}</h1>
+        <div class="d-flex mt-4">
+          <div class="btn btn-success me-2 rounded-5 px-4">Read more</div>
+          <div class="btn btn-outline-success rounded-5 px-4">Contact us</div>
         </div>
-      </div>
+      </hero>
 
       <div class="row">
         <div class="col-sm-12 px-5 pt-5 min-vh-50">
@@ -38,7 +38,7 @@ const { isLoaded, loadImage } = useImageLoader();
         <div class="col-lg-6 min-vh-50 d-flex flex-column my-auto p-5">
           <h4 class="text-secondary fw-bold m-0">Who we are</h4>
           <h1 class="fw-bold lh-1 display-3 my-3">Helping people thrive</h1>
-          <p class="h4 col-md-10 fw-light">Advance Therapy is a healthcare services provider based in Guelph/Kitchener-Waterloo specializing in brain injury rehabilitation. Our team of highly trained therapists help clients achieve their maximum recovery.</p>
+          <p class="fs-4 col-md-11 fw-light">Advance Therapy is a healthcare services provider based in Guelph/Kitchener-Waterloo specializing in brain injury rehabilitation. Our team of highly trained therapists help clients achieve their maximum recovery.</p>
           <div class="d-flex mt-3">
             <router-link to="/about">
               <button role="button" class="btn btn-success rounded-5 px-4">Read more</button>
@@ -56,7 +56,7 @@ const { isLoaded, loadImage } = useImageLoader();
         <div class="col-lg-8 offset-lg-2 d-flex flex-column my-auto mx-auto p-5 text-center">
           <h4 class="text-secondary fw-bold m-0">What we do</h4>
           <h1 class="fw-bold display-3 lh-1 my-3">Supporting success</h1>
-          <p class="h4 fw-light">Advance Therapy provides a wide range of services from academic support to job coaching, physical rehabilitation, and community reintegration activities.</p>
+          <p class="fs-4 fw-light">Advance Therapy provides a wide range of services from academic support to job coaching, physical rehabilitation, and community reintegration activities.</p>
         </div>
         <div class="container px-5">
           <div class="row text-center">
@@ -102,7 +102,7 @@ const { isLoaded, loadImage } = useImageLoader();
         <div class="col-lg-6 min-vh-50 d-flex flex-column my-auto p-5">
           <h4 class="text-secondary fw-bold m-0">Our team</h4>
           <h1 class="col-md-10 fw-bold lh-1 display-3 my-3">Professional care with personal attention</h1>
-          <p class="h4 fw-light col-md-10">Our team of highly trained Rehabilitation Therapists take pride in helping clients achieve their maximum recovery. We work hard to tailor our services to each client, and deliver the best in rehabilitation and support services.</p>
+          <p class="fs-4 fw-light col-md-10">Our team of highly trained Rehabilitation Therapists take pride in helping clients achieve their maximum recovery. We work hard to tailor our services to each client, and deliver the best in rehabilitation and support services.</p>
           <div class="d-flex mt-3">
             <button role="button" class="btn btn-success rounded-5 px-4">Read more</button>
           </div>
@@ -115,19 +115,7 @@ const { isLoaded, loadImage } = useImageLoader();
         </div>
       </div>
 
-      <div class="row min-vh-50 py-5">
-        <div class="col-lg-8 offset-lg-2 d-flex flex-column my-auto mx-auto p-5 text-center">
-          <h4 class="text-secondary fw-bold m-0">Contact us</h4>
-          <h1 class="fw-bold display-3 lh-1 my-3">Start your journey today</h1>
-          <p class="h4 col-md-10 offset-md-1 fw-light">Embark on your journey to recovery with us. Please get in touch for booking, details about our range of services, questions, or for more information. We look forward to hearing from you.</p>
-          <div class="d-flex justify-content-center align-items-center">
-            <button role="button" class="btn btn-success mt-3 px-4 rounded-5">Contact us</button>
-          </div>
-          
-        </div>
-      </div>
-
-
+      <Contact />
       
     </div>
   </div>

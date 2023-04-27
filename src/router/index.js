@@ -35,7 +35,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ServicesView.vue')
     }
-  ]
+  ],
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 })
+      }, 500)
+    })
+  },
 })
 
 export default router

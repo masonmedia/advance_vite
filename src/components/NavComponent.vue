@@ -22,21 +22,30 @@ function imgUrl(name) {
             </div>
         </nav>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Advance Therapy</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas offcanvas-end w-100 bg-dark text-light" tabindex="-1" id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom border-light">
+            <h5 id="offcanvasRightLabel" class="mb-0 py-2">Advance Therapy</h5>
+            <button type="button" class="btn-close me-2" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg text-light" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+</svg>
+            </button>
         </div>
         <div class="offcanvas-body d-flex flex-column p-4">
             <!-- <img :src="imgUrl(`main-logo`)" alt="" style="width: 45px; filter: drop-shadow(0px 0px 0.5px #222)"> -->
             <div class="d-flex flex-column mt-auto" data-bs-dismiss="offcanvas">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item h1 display-3">
                         <router-link 
                         aria-current="page"
                         class="nav-link fw-bold lh-1 py-1"
                         v-for="route in $router.options.routes" :key="route.path" :to="route.path" v-html="route.name"></router-link>
+                        <a href="mailto:doug@atherapy.ca" class="nav-link fw-bold lh-1 py-1">Contact</a>
                     </li>
+                   
+                    <!-- <li class="nav-item h1 display-3">
+                        <a href="mailto:doug@atherapy.ca" class="nav-link fw-bold lh-1 py-1">Contact</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -44,8 +53,9 @@ function imgUrl(name) {
     </div>
 </template>
 
-<style lang="scss">
-.nav-link, .nav-item {
-    font-size: 7vmin;
+<style>
+a {
+    text-decoration: none;
+    color: inherit;
 }
 </style>

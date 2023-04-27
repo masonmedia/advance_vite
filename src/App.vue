@@ -6,7 +6,7 @@ import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <div class="page-fade">
+  <div class="page-fade overflow-hidden">
   <NavComponent />
   <div class="py-3"></div>
     <router-view v-slot="{ Component }">
@@ -19,7 +19,3 @@ import FooterComponent from './components/FooterComponent.vue'
    <FooterComponent />
   </div>
 </template>
-
-<style scoped>
-
-</style>

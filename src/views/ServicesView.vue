@@ -2,6 +2,7 @@
 // import { textData } from '@/stores/data'
 // const data = textData()
 import data from '@/json/data'
+import Hero from '../components/TheHero.vue'
 import IconSupport from '@/components/icons/IconScrollDown.vue'
 
 import { reactive } from 'vue'
@@ -10,7 +11,7 @@ const state = reactive({ isLoaded: false })
 
 function imgLoaded() {
   state.isLoaded = true
-  state.isLoaded ? alert('image loaded') : ''
+  // state.isLoaded ? alert('image loaded') : ''
 }
 
 </script>
@@ -18,12 +19,12 @@ function imgLoaded() {
 <template>
   <div>
     <div class="container-fluid px-0">
-      <div class="row mt-5 pt-5">
-        <div class="col-lg-12 mt-3 px-5 py-3">
-          <h1 class="fw-bold display-1 lh-1">Our Services.</h1>
-        </div>
-      </div>
-      
+
+      <hero col-class="px-5 mt-5 pt-5" :icon="true">
+        <h4 class="mb-3 text-secondary">Our services</h4>
+        <h1 class="fw-bold display-3 lh-1">Advance Therapy specializes in a range of rehabilitation services including academic support, job coaching, addictions support, physical rehabilitation, and more.</h1>
+      </hero>
+
       <div class="row">
         <div class="col-lg-12 px-5 pt-5">
          <img class="w-100 rounded" @load="imgLoaded" src="https://source.unsplash.com/random/1920x1080/?group" alt="">
@@ -34,21 +35,16 @@ function imgLoaded() {
 
       <div class="row min-vh-100">
         <div class="col-lg-12 min-vh-50 d-flex flex-column my-auto p-5">
-          <h4 class="text-secondary fw-bold m-0">Who we are</h4>
-          <h1 class="fw-bold lh-1 display-3 my-3">We specialize in rehabilitation services for people with an acquired brain injury. We offer a range of services offering each client customized support for activities of daily living, educational or vocational pursuits, and community reintegration.</h1>
-          <!-- <p class="h4 fw-light">Advance Therapy is a healthcare services provider based in Guelph/Kitchener-Waterloo specializing in brain injury rehabilitation. Our team of highly trained therapists help clients achieve their maximum recovery.</p> -->
+          <h4 class="text-secondary fw-bold m-0">What we do</h4>
+          <h1 class="fw-bold lh-1 display-3 my-3">Advance Therapy offers a wide range of goal-directed services which help clients rebuild their lives following a motor vehicle accident. A Rehabilitation Therapist works directly with a client in the home or community to develop skills and level of independence over time.</h1>
           <IconSupport />
         </div>
-        <!-- <div class="col-lg-6 px-5 py-lg-5">
-         <img class="w-100 h-100" style="object-fit: cover" src="https://picsum.photos/1000/600?random=1" alt="">
-        </div> -->
       </div>
 
       <div class="row min-vh-100 bg-light">
         <div class="col-lg-6 min-vh-50 d-flex flex-column my-auto p-5">
-          <h4 class="text-secondary fw-bold m-0">Our philosophy</h4>
-          <h1 class="fw-bold display-3 lh-1 my-3">Quality. Trust. Support.</h1>
-          <p class="h4 fw-light mb-4">Advance Therapy provides the highest quality support services for each client. We work hard to develop trust with our clients, discover their strengths and challenges, and partner with them to find unique ways to support, motivate, and enable them to accomplish their goals.</p>
+          <h4 class="text-secondary fw-bold m-0">What we do</h4>
+          <h1 class="fw-bold display-3 lh-1 my-3">Advance Therapy offers a wide range of goal-directed services which help clients rebuild their lives following a motor vehicle accident. A Rehabilitation Therapist works directly with a client in the home or community to develop skills and level of independence over time.</h1>
           <IconSupport />
         </div>
         <div class="col-lg-6 px-5 py-lg-5">

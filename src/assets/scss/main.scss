@@ -4,6 +4,11 @@
 @import "buttons";
 @import "colors";
 @import "text";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+}
 
 .min-vh-50 {
     min-height: 50vh;
