@@ -27,8 +27,8 @@ function imgUrl(name) {
             <h5 id="offcanvasRightLabel" class="mb-0 py-2">Advance Therapy</h5>
             <button type="button" class="btn-close me-2" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg text-light" viewBox="0 0 16 16">
-  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-</svg>
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
             </button>
         </div>
         <div class="offcanvas-body d-flex flex-column p-4">
@@ -52,10 +52,3 @@ function imgUrl(name) {
         </div>
     </div>
 </template>
-
-<style>
-a {
-    text-decoration: none;
-    color: inherit;
-}
-</style>

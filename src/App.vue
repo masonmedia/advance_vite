@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import NavComponent from './components/NavComponent.vue'
-import FooterComponent from './components/FooterComponent.vue'
+import Footer from './components/TheFooter.vue'
 </script>
 
 <template>
@@ -16,6 +16,6 @@ import FooterComponent from './components/FooterComponent.vue'
         <component :is="Component" />
       </transition>
     </router-view>
-   <FooterComponent />
+   <Footer />
   </div>
 </template>
