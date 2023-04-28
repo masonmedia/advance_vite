@@ -6,29 +6,7 @@
             "cta2": "Contact us"
         }
     },
-    "footer": {
-        "one": [
-            "Advance Therapy",
-            "Home",
-            "About"
-        ],
-        "two": [
-            "Office",
-            "188 Inkerman Street",
-            "Guelph, Ontario",
-            "N1H 3E1"
-        ],
-        "three": [
-            "Contact",
-            "doug@atherapy.ca",
-            "1-519-648-3345",
-            "1-866-305-5140"
-        ],
-        "four": [
-            "Resources"
-        ]
-    },
-    "footer2": [
+    "footer": [
         {
             "title": "Advance Therapy",
             "links": [
@@ -45,8 +23,8 @@
                     "url": "/services"
                 },
                 {
-                    "title": "Therapists",
-                    "url": "/"
+                    "title": "Contact",
+                    "url": "mailto:doug@atherapy.ca"
                 }
             ]
         },

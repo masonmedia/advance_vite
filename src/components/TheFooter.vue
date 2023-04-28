@@ -1,20 +1,18 @@
 <template>
-    <footer>
+    <footer class="footer">
         <div class="container-fluid">
             <div class="row bg-dark py-5 text-light">
                 <div class="col-lg-3 col-md-6 d-flex flex-column me-auto p-5"
-                v-for="(item, index) in data.footer2" :key="index">
+                v-for="(item, index) in data.footer" :key="index">
                     <h3 class="fw-bold lh-1 mb-3">{{ item.title }}</h3>
                     <ul class="d-flex flex-column me-auto list-unstyled"
                     v-if="item.links">
                         <li class="" v-for="link in item.links" :key="link.id">
-                            <div v-if="checkLink(link.url)">
-                                <a :href="link.url" 
-                                class="fs-5"
-                                target="_blank" v-html="link.title"></a>
-                                <!-- <span class="visually-hidden fs-1">Test</span> -->
-                            </div>
-
+                            <a v-if="checkLink(link.url)"
+                            :href="link.url" 
+                            class="fs-5"
+                            target="_blank" v-html="link.title"></a>
+                            <!-- <span class="visually-hidden fs-1">Test</span> -->
                             <router-link v-else 
                             :to="link.url" 
                             class="fs-5"
@@ -41,9 +39,9 @@ import data from '@/json/data'
 let text = "Hello World, welcome to the universe.";
 let result = text.includes("world");
 
+// check to see if links are external urls or internal routes
 function checkLink(link) {
-   return link.includes('https://') ? true : link.includes('http://') ? true : '';
-   console.log('link is an external url')
+   return link.includes('https://') ? true : link.includes('http://') ? true : link.includes('mailto:') ? true : '';
 }
 
 const footerData = ref([
